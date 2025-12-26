@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Street Food Recommender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍛 Delhi Street Food Recommender</h1>
+            <p>Discover the perfect street food for right now!</p>
+        </header>
+
+        <div class="context-info">
+            <div class="auto-detected">
+                <span id="time-display">🕐 Evening</span>
+                <span id="weather-display">🌡️ Moderate</span>
+            </div>
+        </div>
+
+        <div class="preferences">
+            <h3>What flavors are you craving?</h3>
+            <div class="flavor-buttons">
+                <button class="flavor-btn" data-flavor="spicy">🌶️ Spicy</button>
+                <button class="flavor-btn" data-flavor="sweet">🍯 Sweet</button>
+                <button class="flavor-btn" data-flavor="sour">🍋 Sour</button>
+                <button class="flavor-btn" data-flavor="chatpata">🧂 Chatpata</button>
+                <button class="flavor-btn" data-flavor="salty">🧂 Salty</button>
+                <button class="flavor-btn surprise" data-flavor="surprise">✨ Surprise me</button>
+            </div>
+
+            <h3>Dietary preference</h3>
+            <div class="diet-buttons">
+                <button class="diet-btn active" data-diet="veg">🥬 Vegetarian</button>
+                <button class="diet-btn" data-diet="non-veg">🍖 Non-Vegetarian</button>
+            </div>
+
+            <button id="get-recommendation" class="recommend-btn">Get My Recommendation!</button>
+        </div>
+
+        <div id="recommendation" class="recommendation hidden">
+            <div class="food-card">
+                <h2 id="food-name"></h2>
+                <p id="food-description"></p>
+                <div class="context-message">
+                    <p id="context-reason"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification container -->
+    <div id="notification" class="notification">
+        <button class="close-btn" onclick="hideNotification()">&times;</button>
+        <span id="notification-text"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
